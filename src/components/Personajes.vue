@@ -30,7 +30,7 @@ export default {
     getPersonajes() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters?apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters?apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {

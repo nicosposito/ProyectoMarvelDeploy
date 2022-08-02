@@ -119,7 +119,7 @@ export default {
     getImgComics() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/comics?orderBy=title&limit=10&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/comics?orderBy=title&limit=10&apikey=${publicKey}`
         )
         .then((result) => {
           var i = 0;
@@ -145,7 +145,7 @@ export default {
     getImgPersonajes() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters?orderBy=name&limit=10&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters?orderBy=name&limit=10&apikey=${publicKey}`
         )
         .then((result) => {
           var i = 0;

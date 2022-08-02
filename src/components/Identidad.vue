@@ -96,7 +96,7 @@ export default {
     getPersonajes() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters?orderBy=name&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters?orderBy=name&apikey=${publicKey}`
         )
         .then((result) => {
           var tipo = "active";
@@ -127,7 +127,7 @@ export default {
     infoComics() {
       localStorage.setItem(
         "consultaComic",
-        "http://gateway.marvel.com/v1/public/comics?characters=" +
+        "https://gateway.marvel.com/v1/public/comics?characters=" +
           this.personajeObtenido.id +
           "&orderBy=title&apikey=" +
           publicKey

@@ -169,7 +169,7 @@ export default {
     getPersonaje() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters/${this.id}?apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters/${this.id}?apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {
@@ -184,7 +184,7 @@ export default {
     getComics() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters/${this.id}/comics?orderBy=-onsaleDate&limit=12&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters/${this.id}/comics?orderBy=-onsaleDate&limit=12&apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {

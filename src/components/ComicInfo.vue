@@ -259,7 +259,7 @@ export default {
     getinfoComic() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/comics/${this.id}?apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/comics/${this.id}?apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {
@@ -278,7 +278,7 @@ export default {
     getPersonajes() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/comics/${this.id}/characters?apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/comics/${this.id}/characters?apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {

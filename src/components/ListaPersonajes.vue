@@ -219,7 +219,7 @@ export default {
     getComics() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/comics?orderBy=title&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/comics?orderBy=title&apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {
@@ -239,7 +239,7 @@ export default {
       let consulta = localStorage.getItem("consultaPersonaje");
       if (consulta == null) {
         consulta =
-          "http://gateway.marvel.com/v1/public/characters?orderBy=name&apikey=" +
+          "https://gateway.marvel.com/v1/public/characters?orderBy=name&apikey=" +
           publicKey;
       } else {
         let filtros = JSON.parse(localStorage.getItem("filtrosPj"));
@@ -265,7 +265,7 @@ export default {
     getSeries() {
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/series?orderBy=title&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/series?orderBy=title&apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {
@@ -303,7 +303,7 @@ export default {
       this.personajes = [];
       axios
         .get(
-          `http://gateway.marvel.com/v1/public/characters?${consulta}&apikey=${publicKey}`
+          `https://gateway.marvel.com/v1/public/characters?${consulta}&apikey=${publicKey}`
         )
         .then((result) => {
           result.data.data.results.forEach((item) => {
@@ -312,7 +312,7 @@ export default {
           this.isLoading = false;
           localStorage.setItem(
             "consultaPersonaje",
-            "http://gateway.marvel.com/v1/public/characters?" +
+            "https://gateway.marvel.com/v1/public/characters?" +
               consulta +
               "&apikey=" +
               publicKey
