@@ -7,8 +7,10 @@ module.exports = defineConfig({
       // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
     }
   }
-}), {
+}, {
   devServer: {
     disableHostCheck: true
   }
 }
+)
+
